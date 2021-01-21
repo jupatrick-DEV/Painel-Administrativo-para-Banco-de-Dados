@@ -24,11 +24,11 @@
                     <a href="../../index2.html" class="h1"><b>Painel<br></b>Administrativo</a>
                 </div>
                 <div class="card-body">
-                    <p class="login-box-msg">entre com os seus dados de acesso</p>
+                    <p class="login-box-msg">Entre com os seus dados de acesso</p>
 
-                    <form action="../../index3.html" method="post">
+                    <form action="?pg=dashboard" method="post">
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Email">
+                            <input name="usuario" type="text" class="form-control" placeholder="Usuário">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-envelope"></span>
@@ -36,7 +36,7 @@
                             </div>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="password" class="form-control" placeholder="Password">
+                            <input name="senha" type="password" class="form-control" placeholder="Senha">
                             <div class="input-group-append">
                                 <div class="input-group-text">
                                     <span class="fas fa-lock"></span>
@@ -44,13 +44,13 @@
                             </div>
                         </div>                       
                     </form>
-
+                    
                     <div class="social-auth-links text-center mt-2 mb-3">
-                        <a href="#" class="btn btn-block btn-primary">
-                            <i class="fab fa-facebook mr-2"></i> Entrar
-                        </a>
-                        <a href="#" class="btn btn-block btn-danger">
-                            <i class="fab fa-google-plus mr-2"></i> Voltar ao site
+                        <button href="?pg=dashboard" class="btn btn-block btn-primary">
+                            <i class="mr-2"></i> Entrar
+                        </button>
+                        <a href="?pg=inicial" class="btn btn-block btn-danger">
+                            <i class=" mr-2"></i> Voltar ao site
                         </a>
                     </div>
                     <!-- /.social-auth-links -->
