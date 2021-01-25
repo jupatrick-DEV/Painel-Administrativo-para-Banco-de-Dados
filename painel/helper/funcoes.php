@@ -9,12 +9,21 @@ function verificaLogin() {
     //Verificar as informções passadas
     //pelo usuário é igual a que estão no banco.
 
-    if ($_POST['usuario'] == $usuario &&
-            $_POST['senha'] == $senha) {
-
-        $_SESSION['usuario'] = $usuario;
-        return TRUE;
+    if ($_POST) {
+        if ($_POST['usuario'] == $usuario &&
+                $_POST['senha'] == $senha) {
+            
+            //cria dados na ss
+            $_SESSION['usuario'] = $usuario;
+            return TRUE;
+        } else {
+            return FALSE;
+        }
     } else {
-        return FALSE;
+        if(isset($_SESSION['usuario'])){            
+            return  TRUE;            
+        } else {
+            return FALSE;
+        }
     }
 }
