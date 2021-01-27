@@ -1,4 +1,5 @@
 
+
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light" >
     <!-- Left navbar links -->
@@ -42,10 +43,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="painel/dist/img/vitinhopolemico.jpg" class="img-circle elevation-2" alt="User Image">
+            <img src="" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="https://www.instagram.com/vitinho_tavares_013/?hl=pt-br" class="d-block">Victor Tavares</a>
+          <a href="https://www.instagram.com/julirias/" class="d-block">Juliana Alves</a>
         </div>
       </div>
 
