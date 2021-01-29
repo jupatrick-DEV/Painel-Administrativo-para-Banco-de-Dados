@@ -34,22 +34,50 @@ if ($pg) {
             include_once 'painel/paginas/includes/footer.php';
             break;
 
-        case 'produtos-item':
+        case 'produtos-editar':
+
+            include_once 'painel/paginas/includes/header.php';
+            include_once 'painel/paginas/includes/menus.php';
+
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                //FUNCAO PARA ATUALIZACAO DO USUARIO
+            } else {
+
+                //mostrar os dados do produto
+                $idProdutoEditar = isset($_GET['id']);
+
+                if ($idProdutoEditar) {
+
+                    $resultDadosTabProdutos = new Conexao();
+                    $dados = $resultDadosTabProdutos->selecionaDados('SELECT * FROM produtos WHERE id = ' . $idProdutoEditar);
+                    include_once 'painel/paginas/produtos-editar.php';
+                } else {
+                    
+                }
+            }
 
             
+            include_once 'painel/paginas/includes/footer.php';
+
+            break;
+
+        case 'produtos-item':
+
+
             $id = $_GET['id'];
 
             $resultDadosTabProdutos = new Conexao();
-            $dados = $resultDadosTabProdutos->selecionaDados('SELECT * FROM produtos WHERE id = '.$id);
+            $dados = $resultDadosTabProdutos->selecionaDados('SELECT * FROM produtos WHERE id = ' . $id);
 
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
             include_once 'painel/paginas/produtos-item.php';
             include_once 'painel/paginas/includes/footer.php';
-            
+
             break;
 
-        case 'serviços':
+        case 'servicos':
 
             //            fazer uma consulta no banco e disponibilizar os resultados
 
@@ -58,8 +86,23 @@ if ($pg) {
 
             include_once 'painel/paginas/includes/header.php';
             include_once 'painel/paginas/includes/menus.php';
-            include_once 'painel/paginas/serviços.php';
+            include_once 'painel/paginas/servicos.php';
             include_once 'painel/paginas/includes/footer.php';
+            break;
+
+        case 'servicos-item':
+
+
+            $id = $_GET['id'];
+
+            $resultDadosTabServicos = new Conexao();
+            $dados = $resultDadosTabServicos->selecionaDados('SELECT * FROM servicos WHERE id = ' . $id);
+
+            include_once 'painel/paginas/includes/header.php';
+            include_once 'painel/paginas/includes/menus.php';
+            include_once 'painel/paginas/produtos-item.php';
+            include_once 'painel/paginas/includes/footer.php';
+
             break;
 
         case 'Contato':
@@ -75,7 +118,20 @@ if ($pg) {
             include_once 'painel/paginas/includes/footer.php';
             break;
 
-        case 'login1':
+        case 'contato-visualizar':
+
+            $id = $_GET['id'];
+
+            $resultDadosTabContato = new Conexao();
+            $dados = $resultDadosTabContato->selecionaDados('SELECT * FROM contato WHERE id = ' . $id);
+
+            include_once 'painel/paginas/includes/header.php';
+            include_once 'painel/paginas/includes/menus.php';
+            include_once 'painel/paginas/contato-visualizar.php';
+            include_once 'painel/paginas/includes/footer.php';
+            break;
+
+        case 'login':
             include_once 'painel/paginas/acesso/login.php';
             break;
 
@@ -84,7 +140,7 @@ if ($pg) {
             if (verificaLogin()) {
                 include_once 'painel/paginas/dashboard.php';
             } else {
-                echo 'Lofgdfkdkg';
+                echo '';
             }
             break;
 

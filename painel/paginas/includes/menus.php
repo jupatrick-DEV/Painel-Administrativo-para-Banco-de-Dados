@@ -67,7 +67,7 @@
             </a>
           </li>
           <li class="nav-item">
-              <a href="?pg=serviços" class="nav-link">
+              <a href="?pg=servicos" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Serviços                

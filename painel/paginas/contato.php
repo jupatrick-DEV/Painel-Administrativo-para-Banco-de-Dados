@@ -36,7 +36,7 @@
                                             <tr>
                                                 <th>Id</th>
                                                 <th>Nome</th>
-                                                <th>Email</th>
+                                                <th>E-mail</th>
                                                 <th>Mensagem</th>
                                                 <th>Ações</th>
                                             </tr>
@@ -54,7 +54,7 @@
                                                 <td><?php echo $dado['mensagem']; ?></td>
                                                 <td>
                                                     <!--visulizar-->
-                                                    <a href="#" class=" btn btn-outline-success"><Span class="fa fa-eye"></Span></a>
+                                                    <a href="?pg=contato-visualizar&id=<?php echo $dado['id']; ?>" class=" btn btn-outline-success"><Span class="fa fa-eye"></Span></a>
                                                     <!-- Editar-->
                                                     <a href="#" class=" btn btn-outline-warning"><Span class="fa fa-edit"></Span></a>
                                                     <!-- Apagar-->

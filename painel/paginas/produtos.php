@@ -18,9 +18,7 @@
     </div>
     <!-- /.content-header -->
 
-    <!-- Main content -->
-    <section class="content">
-        <div class="container-fluid">
+  
 
             <!-- Main content -->
             <section class="content">
@@ -60,7 +58,7 @@
                                                     <!--visulizar-->
                                                     <a href="?pg=produtos-item&id=<?php echo $dado['id']; ?>" class=" btn btn-outline-success"><Span class="fa fa-eye"></Span></a>
                                                     <!-- Editar-->
-                                                    <a href="#" class=" btn btn-outline-warning"><Span class="fa fa-edit"></Span></a>
+                                                    <a href="?pg=produtos-editar&id=<?php echo $dado['id']; ?>" class=" btn btn-outline-warning"><Span class="fa fa-edit"></Span></a>
                                                     <!-- Apagar-->
                                                     <a href="#"class=" btn btn-outline-danger"><Span class="fa fa-trash"></Span></a>
 
@@ -88,9 +86,7 @@
                 <!-- /.container-fluid -->
             </section>
             <!-- /.content -->
-        </div><!-- /.container-fluid -->
-    </section>
-    <!-- /.content -->
+       
 </div>
 <!--/.content-wrapper-->
 
