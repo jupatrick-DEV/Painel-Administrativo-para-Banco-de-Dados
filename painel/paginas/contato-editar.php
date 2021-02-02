@@ -44,18 +44,18 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="email">E-mail </label>
-                                        <input type="text" name="email" value=" <?php echo $dado['email']; ?>" class="form-control" id="email">
+                                        <input type="text" name="email" value=" <?php echo $dado['email']; ?>" class="form-control" id="tipo">
                                     </div>
                                     <div class="form-group">
                                         <label for="mensagem">Mensagem</label>
-                                         <input type="text" name="mensagem" value=" <?php echo $dado['mensagem']; ?>" class="form-control" id="mensagem">
+                                         <input type="text" name="mensagem" value=" <?php echo $dado['mensagem']; ?>" class="form-control" id="nome">
                                     </div>
                                     <input type="hidden" value="<?php echo $dado['id']; ?>" name="id" >
 
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer text-right">
-                                    <a href="?pg=contato" class=" btn btn-warning"><Span class="">Voltar</Span></a>
+                                    <a href="?pg=servicos" class=" btn btn-warning"><Span class="">Voltar</Span></a>
                                     <button type="submit" class=" btn btn-info"><span class="fa fa-save"></Span>Atualizar</button>
                                 </div>
                             <?php } ?>
