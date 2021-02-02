@@ -1,3 +1,8 @@
+<?php
+$resultDadosTabServicos = new Conexao();
+$dados = $resultDadosTabServicos->selecionaDados('SELECT * FROM servicos');
+?>
+
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -5,7 +10,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0"></a>Serviços<small>- Página Serviços do Painel administrativo</small></h1>
+            <h1 class="m-0"></a>Serviços<small> - Painel de Serviços</small></h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -56,9 +61,9 @@
                                                     <!--visulizar-->
                                                     <a href="?pg=servicos-item&id=<?php echo $dado['id']; ?>" class=" btn btn-outline-success"><Span class="fa fa-eye"></Span></a>
                                                     <!-- Editar-->
-                                                    <a href="#" class=" btn btn-outline-warning"><Span class="fa fa-edit"></Span></a>
+                                                    <a href="?pg=servicos-editar&id=<?php echo $dado['id']; ?>" class=" btn btn-outline-warning"><Span class="fa fa-edit"></Span></a>
                                                     <!-- Apagar-->
-                                                    <a href="#"class=" btn btn-outline-danger"><Span class="fa fa-trash"></Span></a>
+                                                    <a href="?pg=servicos-excluir&id=<?php echo $dado['id']; ?>"class=" btn btn-outline-danger"><Span class="fa fa-trash"></Span></a>
 
                                                 </td>
                                             </tr>
